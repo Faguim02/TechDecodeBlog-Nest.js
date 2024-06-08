@@ -17,7 +17,7 @@ export class AdminService {
 
     async upload(image: Express.Multer.File, arquivoDTO: NoticesDTO): Promise<{message: string}>{
 
-        const dataAtual = new Date().toISOString().slice(0, 10);
+        //const dataAtual = new Date().toISOString().slice(0, 10);
 
         const noticeExists = await this.prisma.notices.findFirst({
             where: {
